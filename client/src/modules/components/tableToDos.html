@@ -17,10 +17,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr click.trigger="editToDo(ToDo)" repeat.for="todo of ToDo.ToDosArray">
-                            <td>${ToDo.todo}</td>
-                            <td>${ToDo.priority}</td>
-                            <td>${ToDo.done}</td>
+                        <tr click.trigger="editToDo(ToDo)" repeat.for="todo of ToDos.ToDosArray">
+                            <td>${todo.todo}</td>
+                            <td>${todo.priotity}</td>
+                            <td>${todo.done}</td>
                         </tr>
                     </tbody>
                 </table>
