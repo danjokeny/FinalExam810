@@ -1,0 +1,5 @@
+client/node_modules
+client/.vscode
+client/aurelia_project/environments
+client/aurelia_project/generators
+client/aurelia_project/tasks
