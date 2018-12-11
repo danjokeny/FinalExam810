@@ -5,16 +5,15 @@ import { ToDo } from '../resources/data/ToDos-object';
 
 @inject(Router, ToDo)
 export class ToDos {
-    constructor(router, ToDos) {
+    constructor(router, ToDo) {
         this.router = router;
-        this.ToDos = ToDos;
-        this.message = 'Dannys ToDos';
+        this.ToDos = ToDo;
+        this.message = 'Dannys ToDo';
         this.showToDoEditForm = false;
     }
 
     async activate() {
-        this.showToDoEditForm = false;
-        await this.getToDos();
+        await this.ToDos.getToDos();
     }
 
     attached() {
@@ -22,15 +21,16 @@ export class ToDos {
     }
 
 
-    async getToDos() {
-        await this.ToDos.getToDos();
-    }
+     async getToDos() {
+         await this.ToDos.getToDos();
+     }
 
 
     newToDo() {
         this.ToDo = {
             todo: "",
-            priotity: "low"
+            priotity: "low",
+            done: false
         }
         this.openEditForm();
     }
@@ -43,21 +43,16 @@ export class ToDos {
     async delete() {
         if (this.ToDo) {
             await this.ToDo.delete(this.ToDo);
-            await this.ToDos();
+            await this.ToDos.getToDos();
             this.back();
         }
     }
 
 
-    logout() {
-        this.router.navigate('home');
-    }
-
-
     async save() {
-        if (this.ToDo && this.ToDo.ToDo && this.ToDo.todo) {
-            await this.ToDos.saveFoo(this.ToDo);
-            await this.getTodos();
+        if (this.ToDo && this.ToDo.ToDo && this.ToDo.ToDo) {
+            await this.ToDos.saveTodo(this.ToDo);
+            await this.ToDos.getToDos();
             this.back();
         }
     }
@@ -69,6 +64,6 @@ export class ToDos {
 
     openEditForm() {
         this.showToDoEditForm = true;
-        setTimeout(() => { $("#ToDo").focus(); }, 500);
+        setTimeout(() => { $("#todo").focus(); }, 500);
     }
 }

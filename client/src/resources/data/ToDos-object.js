@@ -7,7 +7,7 @@ export class ToDo {
         this.TODO_SERVICE = 'todos';
     }
 
-    async saveFoo(ToDo) {
+    async saveToDo(ToDo) {
         let serverResponse;
         if (ToDo) {
             if (foo._id) {

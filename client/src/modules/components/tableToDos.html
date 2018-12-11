@@ -17,7 +17,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr click.trigger="editToDo(ToDo)" repeat.for="todo of ToDos.ToDosArray">
+                        <tr click.trigger="editToDo(todo)" repeat.for="todo of ToDos.ToDosArray">
                             <td>${todo.todo}</td>
                             <td>${todo.priotity}</td>
                             <td>${todo.done}</td>
@@ -28,3 +28,5 @@
         </div>
     </div>
 </template>
+
+
