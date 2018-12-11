@@ -22,14 +22,14 @@ export class ToDos {
 
 
     async getToDos() {
-        await this.foos.getToDos();
+        await this.ToDos.getToDos();
     }
 
 
     newToDo() {
         this.ToDo = {
-            ToDo: "",
-            Priority: "",
+            todo: "",
+            priotity: ""
         }
         this.openEditForm();
     }
@@ -54,7 +54,7 @@ export class ToDos {
 
 
     async save() {
-        if (this.ToDo && this.ToDo.ToDo && this.ToDo.ToDo) {
+        if (this.ToDo && this.ToDo.ToDo && this.ToDo.todo) {
             await this.ToDos.saveFoo(this.ToDo);
             await this.getTodos();
             this.back();

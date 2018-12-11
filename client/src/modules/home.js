@@ -8,7 +8,7 @@ export class Home {
           this.message = 'This is Dannys Home Page';
   }
 
-  GetFoo(){
+  GetToDo(){
 	  this.router.navigate('ToDos');
   }
 }
