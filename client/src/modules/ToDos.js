@@ -21,9 +21,9 @@ export class ToDos {
     }
 
 
-     async getToDos() {
-         await this.ToDos.getToDos();
-     }
+    async getToDos() {
+        await this.ToDos.getToDos();
+    }
 
 
     newToDo() {
@@ -55,6 +55,12 @@ export class ToDos {
             this.back();
         }
     }
+
+    //changing an selected todo from the grid to be done or not done
+    changeActive(ToDo) {
+        this.ToDo = ToDo;
+        this.save();
+    };
 
 
     back() {
