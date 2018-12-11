@@ -1,4 +1,4 @@
-var ValidTodo = ['high', 'medium', 'low'];
+var ValidTodo = ['High', 'Meium', 'Low'];
 var ToDoSchema = new ToDoSchema({
   todo: {type: String},
   priotity: { type: String, enum: ValidTodo },
