@@ -29,7 +29,7 @@ export class ToDo {
         }
     }
 
-    async delete(foo) {
+    async delete(ToDo) {
         if (ToDo && ToDo._id) {
             await this.data.delete(this.TODO_SERVICE + '/' + ToDo._id)
         }

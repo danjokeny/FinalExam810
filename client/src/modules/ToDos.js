@@ -42,7 +42,7 @@ export class ToDos {
 
     async delete() {
         if (this.ToDo) {
-            await this.ToDo.delete(this.ToDo);
+            await this.ToDos.delete(this.ToDo);
             await this.ToDos.getToDos();
             this.back();
         }
