@@ -9,10 +9,11 @@ export class ToDos {
         this.router = router;
         this.ToDos = ToDos;
         this.message = 'Dannys ToDos';
-        this.showFooEditForm = false;
+        this.showToDoEditForm = false;
     }
 
     async activate() {
+        this.showToDoEditForm = false;
         await this.getToDos();
     }
 
@@ -29,7 +30,7 @@ export class ToDos {
     newToDo() {
         this.ToDo = {
             todo: "",
-            priotity: ""
+            priotity: "low"
         }
         this.openEditForm();
     }

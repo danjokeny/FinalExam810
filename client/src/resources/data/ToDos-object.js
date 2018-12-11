@@ -4,7 +4,7 @@ import { DataServices } from './data-services';
 export class ToDo {
     constructor(data) {
         this.data = data;
-        this.TODO_SERVICE = 'Todo';
+        this.TODO_SERVICE = 'todos';
     }
 
     async saveFoo(foo) {

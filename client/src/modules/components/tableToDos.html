@@ -1,3 +1,30 @@
 <template>
-    this is the table todo page
-</template>>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="thead-light">
+                            <th colspan="4">
+                                <span click.trigger="newToDo()"><i data-feather="plus"></i></span>
+                                <span click.trigger="getToDos()" style="margin-left:5px;"><i data-feather="refresh-cw"></i></span>
+                            </th>
+                        </tr>
+                        <tr class="thead-light">
+                            <th scope="col">ToDo</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Done</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr click.trigger="editToDo(ToDo)" repeat.for="todo of ToDo.ToDosArray">
+                            <td>${ToDo.todo}</td>
+                            <td>${ToDo.priority}</td>
+                            <td>${ToDo.done}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
