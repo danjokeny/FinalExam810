@@ -48,7 +48,6 @@ export class ToDos {
         }
     }
 
-
     async save() {
         if (this.ToDo && this.ToDo.todo) {
             await this.ToDos.saveToDo(this.ToDo);
