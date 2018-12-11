@@ -10,7 +10,7 @@ export class ToDo {
     async saveToDo(ToDo) {
         let serverResponse;
         if (ToDo) {
-            if (foo._id) {
+            if (ToDo._id) {
                 serverResponse = await this.data.put(ToDo, this.TODO_SERVICE);
             } else {
                 serverResponse = await this.data.post(ToDo, this.TODO_SERVICE);

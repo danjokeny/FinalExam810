@@ -8,7 +8,7 @@ export class ToDos {
     constructor(router, ToDo) {
         this.router = router;
         this.ToDos = ToDo;
-        this.message = 'Dannys ToDo';
+        this.message = 'Dannys ToDos';
         this.showToDoEditForm = false;
     }
 
@@ -50,8 +50,8 @@ export class ToDos {
 
 
     async save() {
-        if (this.ToDo && this.ToDo.ToDo && this.ToDo.ToDo) {
-            await this.ToDos.saveTodo(this.ToDo);
+        if (this.ToDo && this.ToDo.todo) {
+            await this.ToDos.saveToDo(this.ToDo);
             await this.ToDos.getToDos();
             this.back();
         }
