@@ -20,7 +20,13 @@
                         <tr click.trigger="editToDo(todo)" repeat.for="todo of ToDos.ToDosArray">
                             <td>${todo.todo}</td>
                             <td>${todo.priotity}</td>
-                            <td>${todo.done}</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" change.delegate="changeActive(todo)" 
+                                        checked.bind="todo.done"
+                                        type="checkbox" value="" id="defaultCheck1">
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
